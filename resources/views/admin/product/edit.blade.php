@@ -1,0 +1,34 @@
+{{-- Author: Emily Cardona Castañeda  --}}
+
+@extends('layouts.admin')
+
+@section('title', $viewData['title'])
+@section('subtitle', $viewData['subtitle'])
+
+@section('content')
+<div class="row justify-content-center">
+    <div class="col-lg-9">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                @if($errors->any())
+                    <div class="alert alert-danger mb-3">
+                        <ul style="margin: 0; padding-left: 1rem;">
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <form method="POST" action="{{ route('admin.product.update', $viewData['product']->getId()) }}">
+                    @csrf
+                    @method('PUT')
+                    @include('admin.product._form', [
+                        'product'    => $viewData['product'],
+                        'submitText' => __('product.update_button'),
+                    ])
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

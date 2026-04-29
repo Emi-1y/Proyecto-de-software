@@ -1,0 +1,23 @@
+<?php // Author: Emily Cardona Castañeda - category.php
+return [
+    'admin_list_title'    => 'Categories — Admin',
+    'admin_list_subtitle' => 'Category management',
+    'create_title'   => 'Create category',
+    'create_subtitle'=> 'New category',
+    'edit_title'     => 'Edit category',
+    'edit_subtitle'  => 'Modify category',
+    'id'          => 'ID',
+    'name'        => 'Name',
+    'description' => 'Description',
+    'actions'     => 'Actions',
+    'empty'       => 'No categories found.',
+    'create_button' => 'Create category',
+    'save_button'   => 'Save category',
+    'update_button' => 'Update category',
+    'edit_button'   => 'Edit',
+    'delete_button' => 'Delete',
+    'back_button'   => 'Back to list',
+    'created_successfully' => 'Category created successfully.',
+    'updated_successfully' => 'Category updated successfully.',
+    'deleted_successfully' => 'Category deleted successfully.',
+];
